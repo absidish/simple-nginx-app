@@ -1,0 +1,18 @@
+# Ansible Playbook for Bazaar automated tests
+---
+
+- hosts: nginxbazaarat
+  remote_user: root
+
+  tasks:
+
+    - name: Upgrade debian
+      apt:
+        update_cache: true
+        upgrade: "yes"
+
+    - name: Install nginx
+      apt:
+        name: 
+        - nginx
+        state: present
