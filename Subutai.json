@@ -25,7 +25,7 @@
         }
     ],
     "ansible-configuration": {
-        "source-url": "https://github.com/absidish/simple-nginx-app/archive/refs/heads/main.zip",
+        "source-url": "https://ipfs.subutai.io/ipfs/QmW72r1o95AsY2gPU7aSMHkAQdpGb8tu5wouLoCKAUZ1u7/simple-nginx-app-main.zip",
         "ansible-playbook": "site.yml",
         "extra-vars": [
         ],
