@@ -1,7 +1,7 @@
 # Ansible Playbook for Bazaar automated tests
 ---
 
-- hosts: nginxbazaarat
+- hosts: all
   remote_user: root
 
   tasks:
