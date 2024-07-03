@@ -5,7 +5,7 @@
     "author": "https://github.com/absidish",
     "containers": [
         {
-            "hostname": "${containerName}",
+            "hostname": "bazaartest",
             "template": "debian-buster",
             "peer-criteria": "HTTP-GROUP",
             "size": "${containerSize}",
@@ -33,7 +33,7 @@
             {
                 "name": "nginx-container",
                 "hostnames": [
-                    "${containerName}"
+                    "bazaartest"
                 ]
             }
         ]
@@ -49,12 +49,6 @@
             "description": "Enter the application domain name",
             "type": "domain",
             "default": "change.the.domain",
-            "validation": "[a-zA-Z0-9]+"
-        },
-        "containerName": {
-            "description": "Enter the container's hostname",
-            "type": "string",
-            "default": "nginxbazaarat",
             "validation": "[a-zA-Z0-9]+"
         },
         "containerSize": {
