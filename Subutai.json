@@ -39,12 +39,6 @@
         ]
     },
     "user-variables": {
-        "environmentName": {
-            "description": "Enter the environment name",
-            "type": "string",
-            "default": "bazaarAT",
-            "validation": "[a-zA-Z0-9]+"
-        },
         "domainName": {
             "description": "Enter the application domain name",
             "type": "domain",
