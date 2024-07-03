@@ -1,18 +1,18 @@
 {
-    "name": "bazaarAT",
+    "name": "BazaarTest",
     "description": "Simple Nginx site configuration",
     "version": "0.0.1",
     "author": "https://github.com/absidish",
     "containers": [
         {
-            "hostname": "nginxbazaarat",
+            "hostname": "${containerName}",
             "template": "debian-buster",
             "peer-criteria": "HTTP-GROUP",
-            "size": "TINY",
+            "size": "${containerSize}",
             "port-mapping": [
                 {
                     "protocol": "https",
-                    "domain": "iuk.envs.subut.ai",
+                    "domain": "${domainName}",
                     "internal-port": "80",
                     "external-port": "443"
                 }
@@ -33,11 +33,35 @@
             {
                 "name": "nginx-container",
                 "hostnames": [
-                    "nginxbazaarat"
+                    "${containerName}"
                 ]
             }
         ]
     },
     "user-variables": {
+        "environmentName": {
+            "description": "Enter the environment name",
+            "type": "string",
+            "default": "bazaarAT",
+            "validation": "[a-zA-Z0-9]+"
+        },
+        "domainName": {
+            "description": "Enter the application domain name",
+            "type": "domain",
+            "default": "change.the.domain",
+            "validation": "[a-zA-Z0-9]+"
+        },
+        "containerName": {
+            "description": "Enter the container's hostname",
+            "type": "string",
+            "default": "nginxbazaarat",
+            "validation": "[a-zA-Z0-9]+"
+        },
+        "containerSize": {
+            "description": "Container Size",
+            "type": "enum",
+            "default": "TINY",
+            "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
+        }
     }
 }
