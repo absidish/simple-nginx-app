@@ -8,7 +8,7 @@
             "hostname": "bazaartest",
             "template": "debian-buster",
             "peer-criteria": "HTTP-GROUP",
-            "size": "${containerSize}",
+            "size": "TINY",
             "port-mapping": [
                 {
                     "protocol": "https",
@@ -50,12 +50,6 @@
             "type": "domain",
             "default": "change.the.domain",
             "validation": "[a-zA-Z0-9]+"
-        },
-        "containerSize": {
-            "description": "Container Size",
-            "type": "enum",
-            "default": "TINY",
-            "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
         }
     }
 }
